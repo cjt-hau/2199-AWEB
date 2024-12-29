@@ -1,0 +1,31 @@
+<div class="container vh-100 d-flex flex-column justify-content-center align-items-center">
+    <h1 class="mb-0">Lola Anne's Employee List</h1>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Emp. #</th>
+                <th scope="col">Full Name</th>
+                <th scope="col">Gender</th>
+                <th scope="col">Email</th>
+                <th scope="col">Emp. Status</th>
+                <th scope="col">Salary</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let employee of employees">
+                <th scope="row">{{ employee.empNum }}</th>
+                <td>{{ employee.name }}</td>
+                <td>{{ employee.gender }}</td>
+                <td>{{ employee.email }}</td>
+                <td class="text-success" *ngIf="employee.empStatus; else inactiveBlock">Active</td>
+                <ng-template #inactiveBlock>
+                    <td class="text-danger">Inactive</td>
+                </ng-template>
+                <td *ngIf="employee.empStatus; else noSalaryBlock">{{ employee.salary }}</td>
+                <ng-template #noSalaryBlock>
+                    <td>Not Applicable</td>
+                </ng-template>
+            </tr>  
+        </tbody>
+    </table>
+</div>

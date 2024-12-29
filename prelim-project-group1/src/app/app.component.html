@@ -1,0 +1,28 @@
+<nav class="navbar" style="background-color: #e53935;">
+  <div class="container-fluid">
+    <a href="#" class="logo p-2"><img src="../logo.png" alt="Lola Anne's Logo" width="35%"></a>
+    <ul class="nav p-3 nav-underline justify-content-end">
+      <li class="nav-item">
+        <a class="nav-link" style="color: #ffffff" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact : true }">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" style="color: #ffffff" routerLink="/about" routerLinkActive="active">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" style="color: #ffffff" routerLink="/products" routerLinkActive="active">Products</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<router-outlet />
+
+<div class="footer-container">
+  <footer class="text-center text-lg-start" style="background-color: #e53935;">
+    <a class="py-3 d-flex justify-content-center" href="#"><img src="../logo.png" alt="Lola Kate's Logo" width="15%"></a>
+    <div class="text-center text-white pb-3">
+      Copyright © 2024 Lola Anne’s • All Rights Reserved
+      <p>Disclaimer: This website is a parody and for educational purposes only.</p>
+    </div>
+  </footer>
+</div>
